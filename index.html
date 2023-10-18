@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="x-UA-Comapatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width,initial-scaler=1.0" />
+		  <title>VITS RESUMER</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+        <style>
+		  #cv-template{
+              display:none;
+       }
+        .myimg{
+              border-radius:50%;
+              width:200px;
+       }
+       .background{
+              background-color: aqua;
+       }
+       #logo{
+             font-weight: bold;
+             width: 300px;
+             height: 50px;
+             text-align: center;
+             margin-left: 300px;
+             border-radius: 10px;
+             box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+       }
+       #logo:hover{
+         font-weight: bold;
+             width: 300px;
+             height: 50px;
+             background-color: black;
+             color: white;
+             text-align: center;
+             margin-left: 300px;
+             border: 2px solid blue ;
+             border-radius: 10px;
+             box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+       }
+       input{
+        box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+       }
+       textarea{
+        box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+       }
+       textarea:hover{
+            border: 1px solid blue;
+        box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+       }
+       input:hover{
+            border: 1px solid blue;
+        box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+       }
+       #print{
+        padding: 10px;
+        border-radius: 10px;
+        color: white;
+        background-color: blue;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        font-weight: bold;
+       }
+       #print:hover{
+        padding: 10px;
+        border-radius: 10px;
+        background-color: white;
+        color: black;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+        font-weight: bold;
+       }
+      </style>  
+    </head>
+    <body>
+        <!--cv template-->
+        <div class="container" id="cv-form">
+         <h1 class="text-center my-4" id="logo" style="font-size: 32px;">RESUME BUILDER</h1>
+         <div class="row">
+            <!--first column-->
+            <div class="col-md-6">
+                <h3 style="color:red; border-bottom: 2px solid #a84a39; "><b>Personal Information</b></h3>
+                <div class="form-group">
+                    <label for="nameField">Your name</label>
+                    <acronym title="Please! Enter your name"><input type="text" id="nameField" placeholder="Enter here" class="form-control"/></acronym>
+                </div>
+                <div class="form-group mt-2">
+                    <label for="contactField">Phone Number</label>
+                    <acronym title="Please! Enter your Phone Number"><input type="number" id="contactField" placeholder="Enter here" class="form-control"/></acronym>
+                </div>
+                <div class="form-group mt-2">
+                    <label for="addressField">Your Address</label>
+                    <acronym title="Please! Enter your Address"><textarea type="text" id="addressField" placeholder="Enter address" class="form-control" rows="3">       
+                    </textarea></acronym>
+                </div>
+                <p class="text-secondary my-3">Important Details</p>
+                <div class="form-group mt-2">
+                    <label for="fbField">E-mail</label>
+                    <acronym title="Please! Enter your E-mail"><input type="email" id="fbField" placeholder="Enter here" class="form-control"/></acronym>
+                </div>
+                <div class="form-group mt-2">
+                    <label for="instaField">DOB</label>
+                    <acronym title="Please! Enter your Date Of Birth"><input type="date" id="instaField" placeholder="Enter here" class="form-control"/></acronym>
+                </div>
+                <div class="form-group mt-2">
+                    <label for="LinkedField">Zip Code</label>
+                    <acronym title="Please! Enter your Zip Code"><input type="text" id="linkedField" placeholder="Enter here" class="form-control"/></acronym>
+                </div>
+            </div>
+            <!--second column-->
+            <div class="col-md-6">
+                <h3 style="color:red; border-bottom: 2px solid #a84a39;"><b>Professioal Informaion</b></h3>
+                <div class="form-group mt-2">
+                    <label for="">Objective</label>
+                    <acronym title="Give Your a Short Introduction"><textarea placeholder="Enter address" id="objectiveField" rows="5" class="form-control"></textarea></acronym>
+                </div>
+
+                <div class="form-group mt-2" id="we">
+                    <label for="">Work Experience</label>
+                    <acronym title="Tell us about your work experience !"><textarea placeholder="Enter address" rows="3" class="form-control weField">       
+                    </textarea></acronym>
+                    <div class="container text-center mt-2" id="weAddButton">
+                        <acronym title="Add a button"><button onclick="addNewWEField()" class="btn btn-primary btn-sm">Add</button></acronym>
+                    </div>
+                </div>
+                <div class="form-group mt-2" id="aq">
+                    <label for="">Academic Qualification</label>
+                    <acronym title="Tell us about your Academic Qualification !"><textarea placeholder="Enter address" rows="3" class="form-control eqField">       
+                    </textarea></acronym>
+                    <div class="container text-center mt-2" id="aqAddButton">
+                        <acronym title="Add a button"><button onclick="addNewAQField()" class="btn btn-primary btn-sm">Add</button></acronym>
+                    </div>
+                </div>
+            </div>
+         </div>
+         <div class="container text-center mt-3">
+            <acronym title="Click here ! to Generate your Resume"><button onclick="generateCV()" class="btn btn-primary btn-lg">Generate CV</button></acronym>
+         </div>
+        </div>
+        <div class="container" id="cv-template">
+            <div class="row">
+                <!--first col-->
+                <div class="col-md-4 text-center py-5 background">
+                    <img src="https://cdn.onlinewebfonts.com/svg/img_166744.png" alt="" class="img-fluid myimg" />
+                    <div class="container">
+                        <b><u>Name:</u></b>
+                        <p id="nameT1">Poornima Saket</p>
+                        <b><u>Phone Number:</u></b>
+                        <p id="contactT">+916232297181, +916985472584</p>
+                        <b><u>Address:</u></b> 
+                        <p id="addressT">Gram-Purainiha, Post-Kripalpur, pin code- 485112, District Satna (M.P.)</p>
+                        <hr/>
+                        <b><u>E-mail</u></b>
+                        <p><a id="fbT" href="https://www.facebook.com">Email</a></p>
+                        <b><u>DOB</u></b>
+                        <p><a id="instaT" href="https://www.instagram.com">DOB</a></p>
+                        <b><u>Zip Code</u></b>
+                        <p><a id="linkedT" href="https://www.linkedin.com">Zip Code</a></p>
+                    </div>
+                </div>
+                <div class="col-md-8 py-5">
+                    <h1 id="nameT2" class="text-center" style="font-weight:1000">Poornima Saket</h1>
+                    <div class="card mt-4">
+                        <div class="card-header background">
+                            <h3><b>Objective</b></h3>
+                        </div>
+                        <div class="card-body">
+                            <p id="objectiveT">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Similique ex veritatis
+                            consectetur sunt, illo itaque voluptatum quibusdam tempora repudiandae voluptate 
+                            natus officiis, cumque corporis optio quas quaerat suscipit! Rerum, laudantium.</p>
+                        </div>
+                    </div>
+
+                    <div class="card mt-4">
+                        <div class="card-header background">
+                            <h3><b>Work Experience</b></h3>
+                        </div>
+                        <div class="card-body">
+                            <ul id="weT">
+                                <li>I am the web developer</li>
+                                <li>Computer Operator</li>
+                                <li>science work experience</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card mt-4">
+                        <div class="card-header background">
+                            <h3><b>Academic Qulaification</b></h3>
+                        </div>
+                        <div class="card-body">
+                            <ul id="aqT">
+                                <li>I am the web developer</li>
+                                <li>Computer Operator</li>
+                                <li>science work experience</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="container mt-3 text-center">
+                    <button onclick="printCV()" id="print">Print CV</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+        
+		 
+		 <!--JAVA SCRIPT CODE-->
+		  <script>
+		    function addNewWEField(){
+    let newNode=document.createElement("textarea");
+    newNode.classList.add("form-control");
+    newNode.classList.add("weField");
+    newNode.setAttribute("rows",3);
+    newNode.setAttribute("placeholder","Enter here");
+
+    let weOb = document.getElementById("we");
+    let weAddButtonOb = document.getElementById("weAddButton");
+
+    weOb.insertBefore(newNode, weAddButtonOb);
+}
+function addNewAQField(){
+    let newNode=document.createElement("textarea");
+    newNode.classList.add("form-control");
+    newNode.classList.add("eqField");
+    newNode.setAttribute("rows",3);
+    newNode.setAttribute("placeholder","Enter here");
+
+    let aqOb = document.getElementById("aq");
+    let aqAddButtonOb = document.getElementById("aqAddButton");
+
+    aqOb.insertBefore(newNode, aqAddButtonOb);
+}
+function generateCV(){
+    let nameField=document.getElementById("nameField").value;
+    let nameT1=document.getElementById("nameT1");
+    nameT1.innerHTML=nameField;
+    document.getElementById("nameT2").innerHTML=nameField;
+    document.getElementById("contactT").innerHTML=document.getElementById("contactField").value;
+    document.getElementById("addressT").innerHTML=document.getElementById("addressField").value;
+
+    document.getElementById("fbT").innerHTML=document.getElementById("fbField").value;
+    document.getElementById("instaT").innerHTML=document.getElementById("instaField").value;
+    document.getElementById("linkedT").innerHTML=document.getElementById("linkedField").value;
+
+    document.getElementById("objectiveT").innerHTML=document.getElementById("objectiveField").value;
+    //we
+    let wes = document.getElementsByClassName("weField");
+    let str="";
+
+    for(let e of wes){
+        str=str + `<li> ${e.value} </li>`;
+    }
+
+    document.getElementById("weT").innerHTML=str;
+
+    //aq
+    let aqs=document.getElementsByClassName("eqField");
+    let str1="";
+
+    for(let e of aqs){
+        str1 = str1 + `<li> ${e.value} </li>`;
+    }
+    document.getElementById("aqT").innerHTML=str1;
+    document.getElementById("cv-form").style.display="none";
+    document.getElementById("cv-template").style.display="block";
+    
+}
+//print CV
+function printCV(){
+    window.print();
+}
+
+		  </script>
+    </body>
+</html>
